@@ -67,11 +67,13 @@ This is a simple menu, with only two selections. We see each of the simplest die
 
 **Example 2**
 
-{3, 4, 1, 5}
+{3, 4, 1, 5} protein
 
-{2, 8, 5, 1}
+{2, 8, 5, 1} carbs 
 
-{5, 2, 4, 4}
+{5, 2, 4, 4} fats
+
+{70, 78, 66, 66}
 
 {"tFc", "tF", "Ftc"}
 
