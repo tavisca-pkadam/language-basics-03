@@ -40,13 +40,12 @@ namespace Tavisca.Bootcamp.LanguageBasics.Exercise1
 
         public static int[] SelectMeals(int[] protein, int[] carbs, int[] fat, string[] dietPlans)
         {
-            
+
             int[] selectedMenu = new int[dietPlans.Length];
 
             for (var dietIndex = 0; dietIndex < dietPlans.Length; dietIndex++)
             {
                 int[] calorie = CountCalories(protein, carbs, fat);
-
                 int[] reIndex = Enumerable.Range(0, protein.Length).ToArray();
 
                 if (dietPlans[dietIndex].Length.Equals(0))
@@ -64,7 +63,6 @@ namespace Tavisca.Bootcamp.LanguageBasics.Exercise1
             }
 
             return selectedMenu;
-
         }
 
         private static int[] SelectDiet(int[] protein, int[] carbs, int[] fat, int[] calorie,
@@ -111,16 +109,16 @@ namespace Tavisca.Bootcamp.LanguageBasics.Exercise1
             return calorie;
         }
 
-        public static int[]  GetLowIndex(int[] nutrition, int[] indices){
-                
+        public static int[] GetLowIndex(int[] nutrition, int[] indices)
+        {
             var min_value = indices.Select(index => nutrition[index]).Min();
             int[] new_indices = indices.Where(i => nutrition[i] == min_value).ToArray();
 
             return new_indices;
         }
 
-        public static int[] GetHighIndex(int[] nutrition, int[] indices){
-
+        public static int[] GetHighIndex(int[] nutrition, int[] indices)
+        {
             var max_value = indices.Select(index => nutrition[index]).Max();
             int[] new_indices = indices.Where(i => nutrition[i] == max_value).ToArray();
 
